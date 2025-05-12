@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --gradient-1: #4158D0;
+  --gradient-2: #C850C0;
+  --gradient-3: #FFCC70;
 }
 
 @theme inline {
@@ -16,6 +19,9 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --gradient-1: #4158D0;
+    --gradient-2: #C850C0;
+    --gradient-3: #FFCC70;
   }
 }
 
@@ -23,4 +29,75 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Orb styling */
+.orb {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.orb-active {
+  background: linear-gradient(-45deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+  background-size: 400% 400%;
+  animation: gradient-shift 5s ease infinite, pulse 2s infinite alternate;
+}
+
+.orb-inactive {
+  background: linear-gradient(-45deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+  opacity: 0.7;
+}
+
+/* Futuristic animations */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(65, 88, 208, 0.5);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(200, 80, 192, 0.7);
+  }
+}
+
+@keyframes orb {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes orb-slow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
