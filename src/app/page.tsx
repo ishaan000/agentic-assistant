@@ -9,7 +9,8 @@ export default function Home() {
         <div className="mb-8 text-center">
           <p className="text-lg mb-4">
             Medha is an intelligent virtual assistant designed to help you learn
-            about Ishaan&apos;s work experiences and interests.
+            about Ishaan&apos;s work experiences and interests. She speaks both
+            Hindi and English.
           </p>
           <p className="text-sm text-slate-600 dark:text-slate-400">
             Start a conversation with Medha using the interface below!
