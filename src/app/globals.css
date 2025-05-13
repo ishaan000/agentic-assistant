@@ -33,12 +33,20 @@ body {
 
 /* Orb styling */
 .orb {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   position: relative;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .orb {
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .orb-active {
